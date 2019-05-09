@@ -1,0 +1,103 @@
+projeto_loja_online
+
+base de dados:projeto_loja_online
+
+tabela:cargo_funcionarios
+id(int)(auto increment)(PRIMARY KEY)(255)
+nome_cargo(varchar)
+permissoes(varchar)
+
+inserção de dados que devem ser feitos pelo insert-tabela cargo_funcionarios
+id-:1 nome_cargo:Operador permissoes:ADD
+id-:2 nome_cargo:Gerente permissoes:ADD,EDIT,GRAFICOS
+id-:3 nome_cargo:Administrador permissoes:ADD,EDIT,DEL,GRAFICOS,USUARIOS
+
+tabela: categorias
+id(int)(auto increment)(PRIMARY KEY) - auto increment
+nome_categorias (varchar)
+
+inserção de dados - tabela categorias
+id:1 nome_categorias:tecnologia
+id:2 nome_categorias:eletrodomesticos
+id:3 nome_categorias:esporte
+id:4 nome_categorias:relogios
+id:5 nome_categorias:ferramentas
+
+tabela: funcionarios
+id(int) - autoincrement
+nome (varchar)
+senha (varchar)
+cargo (int)
+
+inserção de dados - tabela funcionarios
+id:1 nome:jose123 senha:md5('123') cargo:3
+
+
+tabela: itensvenda
+id(int) - auto increment
+id_vendas(int)
+id_produto(int)
+quantidade(int)
+data_compra(datetime)
+id_usuarios(int)
+
+
+tabela:produtos
+id(int)- auto increment
+id_categorias(int)
+nome_produtos(varchar)
+preco(double)
+imagem_produtos(varchar)
+
+id:1 id_categoria:1 nome_produto:Celular LG preco:500
+id:2 id_categoria:1 nome_produto:Smathphone SAMSUNG preco:600
+id:3 id_categoria:1 nome_produto:Impressora HP preco:400
+id:4 id_categoria:1 nome_produto:Notbook DELL preco:1600
+id:5 id_categoria:2 nome_produto:Geladeira Eletrolux preco:1000
+id:6 id_categoria:2 nome_produto:Freezer Continental preco:800
+id:7 id_categoria:3 nome_produto:Tenis Adidas preco:200
+id:8 id_categoria:3 nome_produto:Bola Futsal Penalty preco:60
+id:9 id_categoria:4 nome_produto:Relogio Rolex preco:2000
+id:10 id_categoria:4 nome_produto:Relogio Hulbolt preco:2500
+id:11 id_categoria:5 nome_produto:Estojo Kit Ferramentas preco:200
+id:12 id_categoria:5 nome_produto:Parafuseira Mondial preco:300
+id:13 id_categoria:1 nome_produto:Notbook i7 preco:2500
+id:14 id_categoria:1 nome_produto:Celular Blackbarry preco:4000
+
+
+
+
+tabela: usuarios
+id(int)-auto increment
+nome_usuarios(varchar)
+email_usuarios(varchar)
+cpf_usuarios(int)
+telefone_usuarios(varchar)
+estado_usuarios(varchar)
+cidade_usuarios(varchar)
+bairro_usuarios(varchar)
+rua_usuarios(varchar)
+numero_endereco_usuarios(int)
+senha(varchar)
+
+
+
+
+tabela: vendas
+id(int) - auto increment
+valor_vendas(double)
+id_usuarios(int)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

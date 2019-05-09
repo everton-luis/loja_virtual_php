@@ -1,0 +1,22 @@
+sql - contagem categoria
+
+select itensvenda.id_produto,produtos.nome_produtos, count(produtos.id_categoria) as contagem_categorias from itensvenda inner join produtos on produtos.id=itensvenda.id_produto where produtos.id_categoria=5
+
+select itensvenda.id, itensvenda.id_produto, itensvenda.quantidade, itensvenda.id_usuarios, produtos.nome_produtos, produtos.id_categoria, sum(quantidade) as total_quantidade_por_categoria from itensvenda inner join produtos on produtos.id=itensvenda.id_produto group by produtos.id_categoria
+
+select itensvenda.id, itensvenda.id_produto, itensvenda.quantidade, itensvenda.id_usuarios, produtos.nome_produtos, produtos.id_categoria, sum(quantidade) as total_quantidade_por_categoria, categorias.nome_categorias from itensvenda inner join produtos on produtos.id=itensvenda.id_produto inner join categorias on categorias.id=produtos.id_categoria group by produtos.id_categoria
+
+
+media quantidade itensvenda
+
+SELECT AVG(quantidade) FROM itensvenda
+
+produtos mais vendidos
+
+select id_produto, sum(quantidade) as quantidade from itensvenda GROUP BY id_produto
+
+select itensvenda.id_produto, sum(quantidade) as quantidade, produtos.nome_produtos from itensvenda inner join produtos on produtos.id=itensvenda.id_produto GROUP BY itensvenda.id_produto;
+
+quantidade total de vendas
+
+select sum(quantidade) as quantidade_total from itensvenda;
